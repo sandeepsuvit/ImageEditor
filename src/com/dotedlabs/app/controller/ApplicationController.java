@@ -1,20 +1,17 @@
-package com.dotedlabs.app;
+package com.dotedlabs.app.controller;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Toolkit;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JToolBar;
-import java.awt.Color;
-import java.awt.SystemColor;
 
-public class Main extends JFrame {
+public class ApplicationController extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +22,8 @@ public class Main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main frame = new Main();
+					
+					ApplicationController frame = new ApplicationController();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,11 +35,13 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Main() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/com/dotedlabs/app/resources/image-editor-icon.png")));
+	public ApplicationController() {
+			
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ApplicationController.class.getResource("/com/dotedlabs/app/resources/image-editor-icon.png")));
 		setTitle("ImageEditor");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		//setBounds(100, 100, 450, 300);
+		setExtendedState(JFrame.MAXIMIZED_BOTH); 
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -86,5 +86,7 @@ public class Main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 	}
-
+	
+	
+	
 }

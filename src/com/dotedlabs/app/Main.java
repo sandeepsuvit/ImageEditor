@@ -38,7 +38,7 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/com/dotedlabs/app/resources/1440090640_brush-pencil.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/com/dotedlabs/app/resources/image-editor-icon.png")));
 		setTitle("ImageEditor");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

@@ -10,6 +10,13 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JToolBar;
 
 public class ApplicationController extends JFrame {
 
@@ -85,8 +92,20 @@ public class ApplicationController extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		JToolBar toolBar = new JToolBar();
+		contentPane.add(toolBar, BorderLayout.NORTH);
+		
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setIcon(new ImageIcon(ApplicationController.class.getResource("/com/dotedlabs/app/resources/open-icon-24.png")));
+		toolBar.add(btnNewButton_1);
+		
+		JButton button = new JButton("");
+		button.setIcon(new ImageIcon(ApplicationController.class.getResource("/com/dotedlabs/app/resources/save-icon-24.png")));
+		toolBar.add(button);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setIcon(new ImageIcon(ApplicationController.class.getResource("/com/dotedlabs/app/resources/crop-icon-24.png")));
+		toolBar.add(btnNewButton);
 	}
-	
-	
-	
 }
